@@ -4,6 +4,20 @@
 
 class Ship {
 public:
+    Ship()
+        : id_(1)
+    {}
+    Ship(size_t id, std::string name, size_t speed, size_t maxCrew, size_t capacity)
+        : id_(id)
+        , name_(name)
+        , speed_(speed)
+        , maxCrew_(maxCrew)
+        , capacity_(capacity)
+    {}
+    Ship(size_t id, size_t speed, size_t maxCrew) 
+        : Ship(id, "", speed, maxCrew, 0)
+    {}
+    
     size_t getId() const        { return id_; }
     std::string getName() const { return name_; }
     size_t getSpeed() const     { return speed_; }
