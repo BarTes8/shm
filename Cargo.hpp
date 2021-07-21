@@ -4,6 +4,12 @@
 
 class Cargo {
 public:
+    Cargo(std::string name, size_t amount, size_t basePrice)
+        : name_(name)
+        , amount_(amount)
+        , basePrice_(basePrice)
+    {}
+
     Cargo& operator+=(size_t amount);
     Cargo& operator-=(size_t amount);
     bool operator==(const Cargo& cargo) const;
