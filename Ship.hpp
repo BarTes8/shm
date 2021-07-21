@@ -22,6 +22,7 @@ public:
     void setName(const std::string& name) { name_ = name; }
 
     Ship& operator+=(size_t crew);
+    Ship& operator-=(size_t crew);
     
     size_t getId() const        { return id_; }
     std::string getName() const { return name_; }

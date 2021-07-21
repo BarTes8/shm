@@ -10,3 +10,12 @@ Ship& Ship::operator+=(size_t crew) {
     crew_ += crew;
     return *this;
 }
+
+Ship& Ship::operator-=(size_t crew) {
+    if (crew_ < crew) {
+        std::cerr << "Number of papayas can't be lower than 0\n";
+        return *this;
+    }
+    crew_ -= crew;
+    return *this;
+}
