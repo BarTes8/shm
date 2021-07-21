@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-Ship& Ship::operator+=(size_t crew) {
+Ship& Ship::operator+=(const size_t crew) {
     if (crew_ + crew > maxCrew_) {
         std::cerr << "Too many papayas\n";
         return *this;
@@ -11,7 +11,7 @@ Ship& Ship::operator+=(size_t crew) {
     return *this;
 }
 
-Ship& Ship::operator-=(size_t crew) {
+Ship& Ship::operator-=(const size_t crew) {
     if (crew_ < crew) {
         std::cerr << "Number of papayas can't be lower than 0\n";
         return *this;
