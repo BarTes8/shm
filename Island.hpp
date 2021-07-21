@@ -10,7 +10,9 @@ public:
             : positionX_(positionX)
             , positionY_(positionY)
         {}
-        
+
+        bool operator==(const Coordinates& position) const;
+
     private:
         size_t positionX_;
         size_t positionY_;
