@@ -11,6 +11,7 @@ public:
         : id_(id)
         , name_(name)
         , speed_(speed)
+        , crew_(0)
         , maxCrew_(maxCrew)
         , capacity_(capacity)
     {}
@@ -19,6 +20,8 @@ public:
     {}
 
     void setName(const std::string& name) { name_ = name; }
+
+    Ship& operator+=(size_t crew);
     
     size_t getId() const        { return id_; }
     std::string getName() const { return name_; }
